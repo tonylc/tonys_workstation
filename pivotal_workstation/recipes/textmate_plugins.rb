@@ -1,18 +1,26 @@
 
 execute "make textmate plugins directory" do
-  command "mkdir -p '#{WS_HOME}/Library/Application Support/TextMate/Bundles'"
+  command "mkdir -p '#{WS_HOME}/Library/Application Support/TextMate/PlugIns'"
   user WS_USER
-  not_if { File.exists?("#{WS_HOME}/Library/Application Support/TextMate/Bundles") }
+  not_if { File.exists?("#{WS_HOME}/Library/Application Support/TextMate/PlugIns") }
 end
 
-execute "clear out the existing RSpec Bundle if it's there" do
-  command "rm -rf '#{WS_HOME}/Library/Application Support/TextMate/Bundles/RSpec.tmbundle'"
+execute "clear out the existing AckMate plugin if it's there" do
+  command "rm -rf '#{WS_HOME}/Library/Application Support/TextMate/PlugIns/AckMate.tmplugin'"
 end
 
-execute "install RSpec Bundle" do
-  command "git clone git://github.com/rspec/rspec-tmbundle.git \"#{WS_HOME}/Library/Application Support/TextMate/Bundles/RSpec.tmbundle\""
+remote_file "/tmp/ackmate.zip" do
+  source node["ackmate_plugin_zip"]
+  mode "0644"
 end
 
-execute "reload TextMate" do
-  command "osascript -e 'tell app \"TextMate\" to reload bundles'"
+execute "unzip ackmate.zip" do
+  command "unzip /tmp/ackmate.zip -d '#{WS_HOME}/Library/Application Support/TextMate/PlugIns'"
+  user WS_USER
+end
+
+bash "YOU NEED TO RESTART TEXTMATE" do
+  code <<-EOS
+  echo "YOU NEED TO RESTART TEXTMATE"
+  EOS
 end
