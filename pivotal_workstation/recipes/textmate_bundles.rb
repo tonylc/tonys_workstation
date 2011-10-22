@@ -5,20 +5,22 @@ execute "make textmate bundles directory" do
   not_if { File.exists?("#{WS_HOME}/Library/Application Support/TextMate/Bundles") }
 end
 
-execute "clear out the existing RSpec Bundle if it's there" do
+execute "clear out the existing RSpec bundle if it's there" do
   command "rm -rf '#{WS_HOME}/Library/Application Support/TextMate/Bundles/RSpec.tmbundle'"
 end
 
-execute "install RSpec Bundle" do
-  command "git clone git://github.com/rspec/rspec-tmbundle.git \"#{WS_HOME}/Library/Application Support/TextMate/Bundles/RSpec.tmbundle\""
+execute "install RSpec bundle" do
+  command "git clone #{node["rspec_bundle_src"]}  \"#{WS_HOME}/Library/Application Support/TextMate/Bundles/RSpec.tmbundle\""
+  user WS_USER
 end
 
-execute "clear out the existing CTags Bundle if it's there" do
+execute "clear out the existing CTags bundle if it's there" do
   command "rm -rf '#{WS_HOME}/Library/Application Support/TextMate/Bundles/ctags.tmbundle'"
 end
 
-execute "install CTags Bundle" do
-  command "git clone https://github.com/textmate/ctags.tmbundle.git \"#{WS_HOME}/Library/Application Support/TextMate/Bundles/CTags.tmbundle\""
+execute "install CTags bundle" do
+  command "git clone #{node["ctags_bundle_src"]}  \"#{WS_HOME}/Library/Application Support/TextMate/Bundles/CTags.tmbundle\""
+  user WS_USER
 end
 
 execute "reload TextMate" do
