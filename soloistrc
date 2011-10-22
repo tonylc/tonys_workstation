@@ -1,11 +1,12 @@
 cookbook_paths:
 - ./
 recipes:
-# - pivotal_workstation::chrome
-# - pivotal_workstation::firefox
-# - pivotal_workstation::gem_no_rdoc_no_ri
-# - pivotal_workstation::git
-# - pivotal_workstation::homebrew
-# - pivotal_workstation::iterm2
-# - pivotal_workstation::terminal_focus
+- pivotal_workstation::chrome
+- pivotal_workstation::firefox
+- pivotal_workstation::gem_no_rdoc_no_ri
+- pivotal_workstation::git
+- pivotal_workstation::homebrew
+- pivotal_workstation::iterm2
+- pivotal_workstation::terminal_focus
+- pivotal_workstation::textmate_bundles
 - pivotal_workstation::textmate_plugins
