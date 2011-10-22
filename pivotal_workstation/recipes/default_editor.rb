@@ -2,7 +2,6 @@ include_recipe "pivotal_workstation::textmate"
 
 # This sets TextMate to be the default editor for
 # .xml, .rb, .erb, .plain-text, .yml, .yaml
-#ls_handler_role_all="com.macromates.textmate"
 ls_handler_role_all="com.macromates.textmate"
 gem_package("plist")
 
