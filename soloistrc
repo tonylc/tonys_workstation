@@ -6,6 +6,7 @@ recipes:
 - pivotal_workstation::firefox
 - pivotal_workstation::gem_no_rdoc_no_ri
 - pivotal_workstation::git
+- pivotal_workstation::gitx
 - pivotal_workstation::homebrew
 - pivotal_workstation::iterm
 - pivotal_workstation::locate_on
