@@ -8,6 +8,7 @@ recipes:
 - pivotal_workstation::git
 - pivotal_workstation::homebrew
 - pivotal_workstation::iterm2
+- pivotal_workstation::set_multitouch_preferences
 - pivotal_workstation::terminal_focus
 - pivotal_workstation::textmate_bundles
 - pivotal_workstation::textmate_plugins
