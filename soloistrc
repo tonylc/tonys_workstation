@@ -2,6 +2,7 @@ cookbook_paths:
 - ./
 recipes:
 - pivotal_workstation::chrome
+- pivotal_workstation::defaults_fast_key_repeat_rate
 - pivotal_workstation::firefox
 - pivotal_workstation::gem_no_rdoc_no_ri
 - pivotal_workstation::git
