@@ -7,7 +7,8 @@ recipes:
 - pivotal_workstation::gem_no_rdoc_no_ri
 - pivotal_workstation::git
 - pivotal_workstation::homebrew
-- pivotal_workstation::iterm2
+- pivotal_workstation::iterm
+- pivotal_workstation::locate_on
 - pivotal_workstation::set_multitouch_preferences
 - pivotal_workstation::terminal_focus
 - pivotal_workstation::textmate_bundles

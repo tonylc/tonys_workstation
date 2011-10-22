@@ -1,0 +1,1 @@
+node.default["iterm_zip"]="http://iterm2.googlecode.com/files/iTerm2_v1_0_0.zip"

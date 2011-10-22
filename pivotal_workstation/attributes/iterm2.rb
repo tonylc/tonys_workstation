@@ -1,1 +1,0 @@
-node.default["iterm2_download_location"]="http://iterm2.googlecode.com/files/iTerm2_v1_0_0.zip"
