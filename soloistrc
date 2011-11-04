@@ -11,5 +11,6 @@ recipes:
 - pivotal_workstation::iterm
 - pivotal_workstation::locate_on
 - pivotal_workstation::set_multitouch_preferences
+- pivotal_workstation::ssh_copy_id
 - pivotal_workstation::textmate_bundles
 - pivotal_workstation::textmate_plugins
